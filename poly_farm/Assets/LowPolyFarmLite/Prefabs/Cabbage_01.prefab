@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8554979865546078707}
   m_RootOrder: 1
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -110,6 +112,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8554979865546078707}
   m_RootOrder: 0
@@ -133,6 +136,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -187,6 +191,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8554979865546078707}
   - component: {fileID: 2506295404697276759}
+  - component: {fileID: 2494062920797917531}
+  - component: {fileID: 5298095513502225715}
   m_Layer: 0
   m_Name: Cabbage_01
   m_TagString: Untagged
@@ -204,6 +210,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3087499890980812981}
   - {fileID: 731027722251266061}
@@ -233,3 +240,33 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8446973881879383255}
   m_Enabled: 1
+--- !u!114 &2494062920797917531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554979865545778643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e2281a6eb8dfd4882777b78a24c0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsHealthy>k__BackingField: 1
+  _plantIllMaterial: {fileID: 2100000, guid: 5a0987c3d88022f4092dae420a62e780, type: 2}
+--- !u!114 &5298095513502225715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554979865545778643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed6352e0f53146448b46f58f475b9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <GrownUp>k__BackingField: 0
+  _startingSize: 0.1
+  _finalSize: 1
+  _growthSpeedInPercentPerSeconds: 0.01
