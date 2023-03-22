@@ -4,7 +4,7 @@ using UnityEngine;
 
 //This is a typical default unity script.
 
-public class MyConsoleScript : MonoBehaviour
+public class MyFirstScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
