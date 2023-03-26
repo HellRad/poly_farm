@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PolyFarm.UI
 {
-    public class SpeechBubble : MonoBehaviour
+    public class PositonalSpeechBubble : MonoBehaviour
     {
         [SerializeField] GameObject _speechBubblePanel;
         [SerializeField] TMP_Text _textField;
@@ -16,12 +16,28 @@ namespace PolyFarm.UI
             DeactivateBubble();
         }
 
-        public void DisplayText(string text)
+        public void DisplayText(GameObject relatedObject, string text)
         {
             _textField.text = text;
             _speechBubblePanel.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(WaitAndClose(_waitTimeInSec));
+            StartCoroutine(UpdateBubblePosition(relatedObject));
+        }
+
+        IEnumerator UpdateBubblePosition(GameObject relatedObject)
+        {
+            while (_speechBubblePanel.activeSelf) 
+            {
+                SetBubblePosition(relatedObject);
+                yield return null;
+            }
+        }
+
+        private void SetBubblePosition(GameObject relatedObject)
+        {
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(relatedObject.transform.position);
+            _speechBubblePanel.transform.position = screenPos;
         }
 
         IEnumerator WaitAndClose(float waitTimeInSec)
@@ -30,7 +46,7 @@ namespace PolyFarm.UI
             DeactivateBubble();
         }
 
-        void DeactivateBubble() 
+        void DeactivateBubble()
         {
             _speechBubblePanel.SetActive(false);
         }
