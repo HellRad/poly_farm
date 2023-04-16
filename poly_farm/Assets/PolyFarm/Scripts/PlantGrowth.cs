@@ -8,11 +8,12 @@ namespace PolyFarm
     [RequireComponent(typeof(Plant))]
     public class PlantGrowth : MonoBehaviour
     {
-        [field: SerializeField] public bool GrownUp { get; private set; }
+        public bool GrownUp { get; private set; }
 
-        [SerializeField] float _startingSize = 0.1f;
-        [SerializeField] float _finalSize = 1f;
-        [SerializeField] float _growthSpeedInPercentPerSeconds = 0.1f;
+        [SerializeField] PlantSO _settings;
+        //[SerializeField] float _startingSize = 0.1f;
+        //[SerializeField] float _finalSize = 1f;
+        //[SerializeField] float _growthSpeedInPercentPerSeconds = 0.1f;
 
         void Awake()
         {
@@ -27,9 +28,9 @@ namespace PolyFarm
 
         void ScaleToStartingSize()
         {
-            var size = _startingSize;
+            var size = _settings.StartingSize;
 
-            if (GrownUp) { size = _finalSize;}
+            if (GrownUp) { size = _settings.FinalSize;}
 
             gameObject.transform.localScale = new Vector3(size, size, size);
         }
@@ -37,16 +38,17 @@ namespace PolyFarm
         void Grow()
         {
             var currentScale = gameObject.transform.localScale;
+            var finalSize = _settings.FinalSize;
 
-            if (currentScale.x >= _finalSize)
+            if (currentScale.x >= finalSize)
             {
                 GrownUp= true;
-                gameObject.transform.localScale = new Vector3(_finalSize, _finalSize, _finalSize);
+                gameObject.transform.localScale = new Vector3(finalSize, finalSize, finalSize);
                 this.enabled = false;
                 return;
             }
 
-            var growthMultiplicator = (1 + _growthSpeedInPercentPerSeconds)  * Time.deltaTime;
+            var growthMultiplicator = (1 + _settings.GrowthSpeedPercentPerSeconds)  * Time.deltaTime;
             var newScale = currentScale + currentScale * growthMultiplicator;
             gameObject.transform.localScale = newScale;
         }

@@ -266,7 +266,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed6352e0f53146448b46f58f475b9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <GrownUp>k__BackingField: 0
-  _startingSize: 0.1
-  _finalSize: 1
-  _growthSpeedInPercentPerSeconds: 0.01
+  _settings: {fileID: 11400000, guid: e8c9ceb1eae355046a01c5c3202c8669, type: 2}
