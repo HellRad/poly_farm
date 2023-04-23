@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7977d7b433571b4889f881c22674bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _comment: 
+  <Comment>k__BackingField: no_commment_text
 --- !u!65 &2441956188042936867
 BoxCollider:
   m_ObjectHideFlags: 0
