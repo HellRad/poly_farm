@@ -4,12 +4,15 @@ using UnityEngine;
 
 namespace PolyFarm
 {
-    public class Plant : MonoBehaviour
+    public class Plant : MonoBehaviour, IFarmItem
     {
+        public string GetName => _plant.name;
         [field: SerializeField] public bool IsHealthy { get; private set; } = true;
         public PlantGrowth PlantGrowth { get; private set; }
+
         [SerializeField] private Material _plantIllMaterial;
         private Material _defaultMaterial;
+        [SerializeField] private PlantSO _plant;
 
         private void Awake()
         {

@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <IsHealthy>k__BackingField: 1
   _plantIllMaterial: {fileID: 2100000, guid: 5a0987c3d88022f4092dae420a62e780, type: 2}
+  _plant: {fileID: 11400000, guid: e8c9ceb1eae355046a01c5c3202c8669, type: 2}
 --- !u!114 &5298095513502225715
 MonoBehaviour:
   m_ObjectHideFlags: 0

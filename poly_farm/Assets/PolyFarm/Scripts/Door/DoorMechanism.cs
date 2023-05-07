@@ -8,7 +8,21 @@ namespace PolyFarm
     {
         [SerializeField] Animator _animator;
 
-        //TODO: There is something missing here for it to work!
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                OpenDoor();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                CloseDoor();
+            }
+        }
 
         void OpenDoor()
         {

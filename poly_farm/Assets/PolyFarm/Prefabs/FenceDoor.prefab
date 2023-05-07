@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8712103219657284522}
   - component: {fileID: 7083738563140380065}
   - component: {fileID: 6070265067326942291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OpenCloseCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

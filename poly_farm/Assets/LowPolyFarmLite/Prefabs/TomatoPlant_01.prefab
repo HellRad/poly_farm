@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2906742830765571359}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -106,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2906742830765571359}
   - component: {fileID: 7475514592933617969}
+  - component: {fileID: 1021592454202197603}
   m_Layer: 0
   m_Name: TomatoPlant_01
   m_TagString: Untagged
@@ -123,6 +126,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6383297392564313404}
   - {fileID: 7426958264036711301}
@@ -152,6 +156,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2976623064582525220}
   m_Enabled: 1
+--- !u!114 &1021592454202197603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906742830765859135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e2281a6eb8dfd4882777b78a24c0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsHealthy>k__BackingField: 1
+  _plantIllMaterial: {fileID: 2100000, guid: 5a0987c3d88022f4092dae420a62e780, type: 2}
+  _plant: {fileID: 11400000, guid: 2db03d9d53175694f82a679a1ec35cf1, type: 2}
 --- !u!1 &4852743575741663473
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +199,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2906742830765571359}
   m_RootOrder: 1
@@ -203,6 +223,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

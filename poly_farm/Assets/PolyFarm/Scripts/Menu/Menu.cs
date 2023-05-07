@@ -2,18 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public struct Bla {
-    public bool isBool;
-    public int anInt;
-
-}
-
 public class Menu : MonoBehaviour
 {
-
-    public Bla bla;
-
     public GameObject menu;
     bool menuOpen;
 
