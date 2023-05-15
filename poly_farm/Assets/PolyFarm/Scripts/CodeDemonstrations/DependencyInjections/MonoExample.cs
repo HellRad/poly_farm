@@ -1,25 +1,28 @@
-﻿using System.Net.NetworkInformation;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeDemonstrations.DependencyInjections
 {
-    public class Mommy
+    public class MonoMommy : MonoBehaviour
     {
-        [SerializeField] Chick monoChickPrefab;
-
+        [SerializeField] GameObject monoChickPrefab;
         void SpawnChick()
         {
-            var chick = new Chick(this);
+            var chick = Instantiate(monoChickPrefab).GetComponent<MonoChick>();
+            chick.Init(this);
         }
+        public void Hug() { }
     }
 
-    public class Chick
+    public class MonoChick : MonoBehaviour
     {
-        Mommy mommy;
-
-        public Chick(Mommy mom)
+        MonoMommy mommy;
+        public void Init(MonoMommy mom)
         {
             mommy = mom;
+        }
+        void HugMom()
+        {
+            mommy.Hug();
         }
     }
 }
