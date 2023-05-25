@@ -56,7 +56,7 @@ namespace CodeDemo.Serialization
 
             if (serializeToJsonFile)
             {
-                var filePath = $"{Application.persistentDataPath}/{fileName}json";
+                var filePath = $"{Application.persistentDataPath}/{fileName}.json";
                 saveLoad.SaveAsJSON(gameData, filePath);
             }
 
