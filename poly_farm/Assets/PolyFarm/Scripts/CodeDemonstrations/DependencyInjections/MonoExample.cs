@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeDemonstrations.DependencyInjections
+namespace CodeDemo.DependencyInjections
 {
     public class MonoMommy : MonoBehaviour
     {
