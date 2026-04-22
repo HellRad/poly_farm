@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
-using static UnityEditor.FilePathAttribute;
 
 namespace CodeDemo
 {

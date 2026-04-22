@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Text;
-using UnityEngine.Serialization;
-//using System.Text.Json.Serialization;
 using System.Collections;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.Playables;
 using System.Runtime.Serialization;
 
 namespace CodeDemo.Serialization
