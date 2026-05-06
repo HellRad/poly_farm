@@ -60,6 +60,6 @@ namespace PolyFarm
             var origin = castCamera.transform.position + castCamera.transform.forward * originAdjustment;
             Gizmos.DrawLine(origin, origin + castCamera.transform.forward * maxDistance);
         }
-    }
 #endif
+    }
 }
