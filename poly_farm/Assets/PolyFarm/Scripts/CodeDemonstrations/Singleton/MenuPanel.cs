@@ -8,7 +8,7 @@ namespace CodeDemo
         [SerializeField] Button startGameButton;
         [SerializeField] Button switchGameStateButton;
 
-        private void Awake()
+        void Awake()
         {
             startGameButton.onClick.AddListener(() => { GameManager.Instance.StartGame();});
             switchGameStateButton.onClick.AddListener(SwitchGameStateButton_OnClick);

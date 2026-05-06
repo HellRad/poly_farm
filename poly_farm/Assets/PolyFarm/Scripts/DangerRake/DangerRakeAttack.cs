@@ -18,8 +18,6 @@ namespace PolyFarm
 
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log("On trigger enter");
-
             if (other.CompareTag("Player"))
             {
                 AttackAndCooldown();
