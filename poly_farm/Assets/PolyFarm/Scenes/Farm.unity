@@ -10641,7 +10641,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -32678,9 +32678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c74d98134094a64ba278e46767927e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speechBubblePanel: {fileID: 1144162748}
-  _textField: {fileID: 1515260058}
-  _waitTimeInSec: 3
+  speechBubblePanel: {fileID: 1144162748}
+  textField: {fileID: 1515260058}
+  waitTimeInSec: 2
 --- !u!1001 &1559412958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45570,6 +45570,11 @@ PrefabInstance:
       propertyPath: castCamera
       value: 
       objectReference: {fileID: 8944336656349189699}
+    - target: {fileID: 5582756704858378195, guid: a0cc7b733e71e334cb087e02655fdbb0,
+        type: 3}
+      propertyPath: speechBubble
+      value: 
+      objectReference: {fileID: 1322718134}
     - target: {fileID: 6174872827757338349, guid: a0cc7b733e71e334cb087e02655fdbb0,
         type: 3}
       propertyPath: _speechBubble

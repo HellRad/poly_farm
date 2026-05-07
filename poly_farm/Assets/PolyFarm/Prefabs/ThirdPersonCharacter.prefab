@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3796585844130160258}
   - component: {fileID: 1025162656948734444}
   - component: {fileID: 8150532714529112445}
-  - component: {fileID: 6174872827757338349}
   - component: {fileID: 7109807615037937626}
   - component: {fileID: 1886059143825756690}
   - component: {fileID: 6336303190384231886}
@@ -37,14 +36,15 @@ Transform:
   m_LocalScale: {x: 1.3000001, y: 1.3, z: 1.3000001}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4424249504379062657}
-  - {fileID: 2916125471322690000}
   - {fileID: 7949214453936136870}
   - {fileID: 6298354804663000216}
+  - {fileID: 4424249504379062657}
+  - {fileID: 2916125471322690000}
   - {fileID: 4138956897330171080}
   - {fileID: 5336353346636988072}
   - {fileID: 5427681689934599722}
   - {fileID: 7198156814443722079}
+  - {fileID: 7900938320369344739}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3796585844130160258
@@ -110,19 +110,6 @@ MonoBehaviour:
   _isTired: 1
   _tiredText: Uwaaa... Oh no!  I'm late for today's chores!
   _notTiredText: What a nice day!
---- !u!114 &6174872827757338349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104770140053881842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505e9d86e28b433478cdfd6f5b64b2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speechBubble: {fileID: 0}
 --- !u!114 &7109807615037937626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +977,7 @@ GameObject:
   - component: {fileID: 7949214453936136870}
   - component: {fileID: 489610662374013102}
   m_Layer: 0
-  m_Name: Body05
+  m_Name: BodyMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,6 +1275,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1627141017001980724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7900938320369344739}
+  - component: {fileID: 5582756704858378195}
+  m_Layer: 8
+  m_Name: PlayerSpeech
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7900938320369344739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627141017001980724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 11557622052018402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5582756704858378195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627141017001980724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505e9d86e28b433478cdfd6f5b64b2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubble: {fileID: 0}
 --- !u!1 &1653323771732806919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841ec95bf3faf7a438a96560102fe7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PlayerSpeech>k__BackingField: {fileID: 6174872827757338349}
+  <PlayerSpeech>k__BackingField: {fileID: 5582756704858378195}
   _hurtText: Ouchy!
 --- !u!1 &1789822196094388774
 GameObject:

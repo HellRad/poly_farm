@@ -9,7 +9,7 @@ namespace PolyFarm
         public Action<RayInteraction> OnNewInteractableFocused;
         public Action OnInteractableUnfocused;
 
-        [SerializeField] Camera castCamera;
+        [SerializeField] Camera castCamera; //Since UI code is usually not part of the player character controller the reference to the speech bubble should normally not be done by a reference field like this. This is for demontration puroses. To connect to ui use something like a singleton pattern or dependency injection.
         [SerializeField] float originAdjustment;
         [SerializeField] float maxDistance;
         [SerializeField] LayerMask layerMask;

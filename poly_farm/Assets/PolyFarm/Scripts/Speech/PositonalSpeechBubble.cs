@@ -2,52 +2,43 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-namespace PolyFarm.UI
-{
-    public class PositonalSpeechBubble : MonoBehaviour
-    {
-        [SerializeField] GameObject _speechBubblePanel;
-        [SerializeField] TMP_Text _textField;
-        [SerializeField] float _waitTimeInSec;
+namespace PolyFarm.UI {
+    public class PositonalSpeechBubble : MonoBehaviour {
+        [SerializeField] GameObject speechBubblePanel;
+        [SerializeField] TMP_Text textField;
+        [SerializeField] float waitTimeInSec;
 
-        private void Awake()
-        {
+        void Awake() {
             DeactivateBubble();
         }
 
-        public void DisplayText(GameObject relatedObject, string text)
-        {
-            _textField.text = text;
-            _speechBubblePanel.SetActive(true);
+        public void DisplayText(GameObject relatedObject, string text) {
+            textField.text = text;
+            speechBubblePanel.SetActive(true);
             StopAllCoroutines();
-            StartCoroutine(WaitAndClose(_waitTimeInSec));
+            StartCoroutine(WaitAndClose(waitTimeInSec));
             StartCoroutine(UpdateBubblePosition(relatedObject));
         }
 
-        IEnumerator UpdateBubblePosition(GameObject relatedObject)
-        {
-            while (_speechBubblePanel.activeSelf) 
-            {
+        IEnumerator UpdateBubblePosition(GameObject relatedObject) {
+            while (speechBubblePanel.activeSelf) {
                 SetBubblePosition(relatedObject);
                 yield return null;
             }
         }
 
-        private void SetBubblePosition(GameObject relatedObject)
-        {
+        void SetBubblePosition(GameObject relatedObject) {
             Vector3 screenPos = Camera.main.WorldToScreenPoint(relatedObject.transform.position);
-            _speechBubblePanel.transform.position = screenPos;
+            speechBubblePanel.transform.position = screenPos;
         }
 
-        IEnumerator WaitAndClose(float waitTimeInSec)
-        {
+        IEnumerator WaitAndClose(float waitTimeInSec) {
             yield return new WaitForSeconds(waitTimeInSec);
             DeactivateBubble();
         }
 
-        void DeactivateBubble()
-        {
-            _speechBubblePanel.SetActive(false);
+        void DeactivateBubble() {
+            speechBubblePanel.SetActive(false);
         }
     }
 }
