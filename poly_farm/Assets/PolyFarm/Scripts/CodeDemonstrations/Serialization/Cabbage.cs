@@ -14,7 +14,7 @@ namespace CodeDemo.Serialization
         public string id = "someUniqueId"; //this should be a unique id!!!!
         float growth = 0.5f;
 
-        string uniqueIdExample = GUID.Generate().ToString();
+        //string uniqueIdExample = GUID.Generate().ToString();
 
         void Awake()
         {
