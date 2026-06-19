@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 70180088752325968}
   - component: {fileID: 4290356005520580148}
   m_Layer: 0
-  m_Name: PennyPixel_Endless
+  m_Name: Penny_Endless
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

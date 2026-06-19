@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Dev/PolyFarm/Scenes/RollAChicken.unity
     guid: caac71b9ee1bd4f4faa1a0fc9e483de8
+  - enabled: 1
+    path: Assets/_Dev/Plattformer/Scenes/Plattformer.unity
+    guid: c7481e7b70f261144a536b5792f6c2a1
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 218343c61aaec9c4bb418964ff3a1867,
       type: 2}

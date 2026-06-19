@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - CinemachineTarget
+  - BarrierL
+  - Ground
+  - Props
+  - Obstacle
+  - Collectible
+  - Interactable
   layers:
   - Default
   - TransparentFX

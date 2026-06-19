@@ -5,8 +5,6 @@ namespace PennyPixelEndless {
     public class GameManager : MonoBehaviour {
         [SerializeField] KeyCode restartKey = KeyCode.R;
         [SerializeField] string gameSceneName = "EndlessRunner";
-        [SerializeField] string leftBarrierTag = "BarrierL";
-        [SerializeField] string obstacleTag = "Obstacle";
         [SerializeField] string propsTag = "Props";
         [SerializeField] TMP_Text pointsText;
         [SerializeField] Obstacle obstacle;
